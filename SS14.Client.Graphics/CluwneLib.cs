@@ -109,6 +109,7 @@ namespace SS14.Client.Graphics
         public static void SetMode(int displayWidth, int displayHeight)
         {
             Screen = new CluwneWindow(new VideoMode((uint)displayWidth, (uint)displayHeight), "Space station 14");
+            Screen.SetMouseCursorVisible(false);
         }
 
         public static void SetMode(int width, int height, bool fullscreen, bool p4, bool p5, int refreshRate)
@@ -120,6 +121,7 @@ namespace SS14.Client.Graphics
             else stylesTemp = Styles.Default;
 
             Screen = new CluwneWindow(new VideoMode((uint)width, (uint)height),"Space Station 14",stylesTemp);
+            Screen.SetMouseCursorVisible(false);
         }
 
         public static void Clear(Color color)
